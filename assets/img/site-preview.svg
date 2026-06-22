@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="SwiftTrack Express preview image">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ba0c2f"/>
+      <stop offset="1" stop-color="#7d061f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="260" fill="#ffcc00" opacity=".12"/>
+  <circle cx="1020" cy="470" r="180" fill="#fff" opacity=".06"/>
+  <g transform="translate(92 106)">
+    <rect width="118" height="118" rx="24" fill="#ffcc00"/>
+    <path d="M24 72h10l8-24h39l12 14h11v10h-8a15 15 0 0 1-29 0H55a15 15 0 0 1-29 0h-2z" fill="#ba0c2f"/>
+    <circle cx="40" cy="75" r="8" fill="#fff"/>
+    <circle cx="78" cy="75" r="8" fill="#fff"/>
+  </g>
+  <text x="240" y="165" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="800">SwiftTrack</text>
+  <text x="240" y="235" fill="#ffcc00" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="800">Express</text>
+  <text x="98" y="350" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700">Track Your Shipment</text>
+  <text x="98" y="420" fill="#ffe8ec" font-family="Inter, Arial, sans-serif" font-size="30">London to Bengaluru international delivery</text>
+  <rect x="98" y="480" width="440" height="70" rx="10" fill="#fff"/>
+  <text x="126" y="526" fill="#333" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">TTN 7543698412</text>
+  <rect x="562" y="480" width="190" height="70" rx="10" fill="#ffcc00"/>
+  <text x="604" y="526" fill="#333" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">In Transit</text>
+</svg>

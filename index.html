@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftTrack Express - Track Your Shipment</title>
+    <meta name="description" content="SwiftTrack Express shipment tracking and international delivery calculator.">
+    <meta name="theme-color" content="#ba0c2f">
+    <link rel="canonical" href="https://www.swiftrackexpres.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SwiftTrack Express - Track Your Shipment">
+    <meta property="og:description" content="Track shipments and calculate delivery costs with SwiftTrack Express.">
+    <meta property="og:url" content="https://www.swiftrackexpres.com/">
+    <meta property="og:image" content="https://www.swiftrackexpres.com/assets/img/site-preview.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SwiftTrack Express - Track Your Shipment">
+    <meta name="twitter:description" content="Track shipments and calculate delivery costs with SwiftTrack Express.">
+    <meta name="twitter:image" content="https://www.swiftrackexpres.com/assets/img/site-preview.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div>
+                    <i class="fas fa-globe"></i> English
+                </div>
+                <div>
+                    <a href="#"><i class="fas fa-user"></i> Customer Portal</a>
+                    <a href="#"><i class="fas fa-headset"></i> Support</a>
+                    <a href="#"><i class="fas fa-search"></i> Search</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="logo-text">Swift<span>Track</span></div>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#track">Track</a></li>
+                        <li><a href="#ship">Ship</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#" class="btn-login">Log In</a>
+                    <a href="#" class="btn-primary">Ship Now</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="track">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Track Your Shipment<br>Anytime, Anywhere</h1>
+                <p>Enter your TTN to see the current shipment status and route details.</p>
+
+                <div class="tracking-box">
+                    <div class="tracking-input-group">
+                        <input type="text" class="tracking-input" id="trackingInput" placeholder="Enter TTN number">
+                        <button class="btn-track" onclick="trackShipment()">
+                            <i class="fas fa-search"></i> Track
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Result -->
+    <section class="tracking-result" id="trackingResult">
+        <div class="container">
+            <div class="result-header">
+                <div>
+                    <h2>Shipment Details</h2>
+                    <p style="color: #666; margin-top: 5px;">TTN Number: <strong id="resultTrackingNum">7543698412</strong></p>
+                </div>
+                <span class="shipment-status status-transit" id="shipmentStatus">
+                    <i class="fas fa-truck"></i> In Transit
+                </span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px;">
+                <div style="background: #f8f9fa; padding: 24px; border-radius: 8px;">
+                    <h4 style="color: #666; font-size: 14px; margin-bottom: 8px;">FROM</h4>
+                    <p style="font-weight: 700; font-size: 18px;">London</p>
+                    <p style="color: #666; margin-top: 4px;">United Kingdom</p>
+                </div>
+                <div style="background: #f8f9fa; padding: 24px; border-radius: 8px;">
+                    <h4 style="color: #666; font-size: 14px; margin-bottom: 8px;">TO</h4>
+                    <p style="font-weight: 700; font-size: 18px;">Bengaluru, Karnataka</p>
+                    <p style="color: #666; margin-top: 4px;">India</p>
+                </div>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 24px; border-radius: 8px; margin-bottom: 30px;">
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center;">
+                    <div>
+                        <p style="color: #666; font-size: 13px;">SERVICE</p>
+                        <p style="font-weight: 700; margin-top: 4px;">International Express</p>
+                    </div>
+                    <div>
+                        <p style="color: #666; font-size: 13px;">WEIGHT</p>
+                        <p style="font-weight: 700; margin-top: 4px;">2.5 kg</p>
+                    </div>
+                    <div>
+                        <p style="color: #666; font-size: 13px;">ESTIMATED DELIVERY</p>
+                        <p style="font-weight: 700; margin-top: 4px;">En route to Bengaluru</p>
+                    </div>
+                    <div>
+                        <p style="color: #666; font-size: 13px;">PIECES</p>
+                        <p style="font-weight: 700; margin-top: 4px;">1</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom: 24px; font-size: 20px;">Shipment History</h3>
+            <div class="timeline" id="timeline">
+                <div class="timeline-item active">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>In Transit - On the way to Bengaluru</h4>
+                        <p>Departed London International Gateway, United Kingdom</p>
+                        <p class="time"><i class="far fa-clock"></i> Current status: in transit</p>
+                    </div>
+                </div>
+                <div class="timeline-item completed">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Processed at London Facility</h4>
+                        <p>London, United Kingdom - export processing completed</p>
+                        <p class="time"><i class="far fa-clock"></i> Previous update</p>
+                    </div>
+                </div>
+                <div class="timeline-item completed">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Shipment Picked Up</h4>
+                        <p>London, United Kingdom - pickup completed from sender</p>
+                        <p class="time"><i class="far fa-clock"></i> Previous update</p>
+                    </div>
+                </div>
+                <div class="timeline-item completed">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Shipment Information Received</h4>
+                        <p>Electronic information submitted by shipper</p>
+                        <p class="time"><i class="far fa-clock"></i> Previous update</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive shipping solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Express Delivery</h3>
+                    <p>Next-day and same-day delivery options for urgent shipments across India and internationally.</p>
+                    <a href="#" class="btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Parcel Shipping</h3>
+                    <p>Reliable parcel delivery for businesses and individuals with real-time tracking and insurance.</p>
+                    <a href="#" class="btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Freight & Cargo</h3>
+                    <p>Full truckload and less-than-truckload shipping for heavy and bulk cargo across the country.</p>
+                    <a href="#" class="btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3>International</h3>
+                    <p>Global shipping to 220+ countries with customs clearance and door-to-door delivery.</p>
+                    <a href="#" class="btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Returns Management</h3>
+                    <p>Easy returns processing with reverse logistics and automated refund tracking.</p>
+                    <a href="#" class="btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Shipping</h3>
+                    <p>High-value item handling with tamper-proof packaging and insurance coverage up to ₹10 lakh.</p>
+                    <a href="#" class="btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>50M+</h3>
+                    <p>Deliveries Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>28,000+</h3>
+                    <p>Pin Codes Covered</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.2%</h3>
+                    <p>On-Time Delivery</p>
+                </div>
+                <div class="stat-item">
+                    <h3>220+</h3>
+                    <p>Countries Served</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping Calculator -->
+    <section class="calculator" id="ship">
+        <div class="container">
+            <div class="section-title">
+                <h2>Calculate Shipping Cost</h2>
+                <p>Get instant quotes for your shipment</p>
+            </div>
+            <div class="calc-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>From (Origin)</label>
+                        <select id="origin">
+                            <option value="">Select City</option>
+                            <option value="london">London, United Kingdom</option>
+                            <option value="manchester">Manchester, United Kingdom</option>
+                            <option value="birmingham">Birmingham, United Kingdom</option>
+                            <option value="glasgow">Glasgow, United Kingdom</option>
+                            <option value="bengaluru">Bengaluru, India</option>
+                            <option value="mumbai">Mumbai, India</option>
+                            <option value="delhi">Delhi, India</option>
+                            <option value="chennai">Chennai, India</option>
+                            <option value="kolkata">Kolkata, India</option>
+                            <option value="hyderabad">Hyderabad, India</option>
+                            <option value="pune">Pune, India</option>
+                            <option value="ahmedabad">Ahmedabad, India</option>
+                            <option value="jaipur">Jaipur, India</option>
+                            <option value="lucknow">Lucknow, India</option>
+                            <option value="kochi">Kochi, India</option>
+                            <option value="goa">Goa, India</option>
+                            <option value="surat">Surat, India</option>
+                            <option value="chandigarh">Chandigarh, India</option>
+                            <option value="indore">Indore, India</option>
+                            <option value="nagpur">Nagpur, India</option>
+                            <option value="dubai">Dubai, UAE</option>
+                            <option value="singapore">Singapore</option>
+                            <option value="bangkok">Bangkok, Thailand</option>
+                            <option value="kuala-lumpur">Kuala Lumpur, Malaysia</option>
+                            <option value="new-york">New York, United States</option>
+                            <option value="toronto">Toronto, Canada</option>
+                            <option value="sydney">Sydney, Australia</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>To (Destination)</label>
+                        <select id="destination">
+                            <option value="">Select City</option>
+                            <option value="london">London, United Kingdom</option>
+                            <option value="manchester">Manchester, United Kingdom</option>
+                            <option value="birmingham">Birmingham, United Kingdom</option>
+                            <option value="glasgow">Glasgow, United Kingdom</option>
+                            <option value="bengaluru">Bengaluru, India</option>
+                            <option value="mumbai">Mumbai, India</option>
+                            <option value="delhi">Delhi, India</option>
+                            <option value="chennai">Chennai, India</option>
+                            <option value="kolkata">Kolkata, India</option>
+                            <option value="hyderabad">Hyderabad, India</option>
+                            <option value="pune">Pune, India</option>
+                            <option value="ahmedabad">Ahmedabad, India</option>
+                            <option value="jaipur">Jaipur, India</option>
+                            <option value="lucknow">Lucknow, India</option>
+                            <option value="kochi">Kochi, India</option>
+                            <option value="goa">Goa, India</option>
+                            <option value="surat">Surat, India</option>
+                            <option value="chandigarh">Chandigarh, India</option>
+                            <option value="indore">Indore, India</option>
+                            <option value="nagpur">Nagpur, India</option>
+                            <option value="dubai">Dubai, UAE</option>
+                            <option value="singapore">Singapore</option>
+                            <option value="bangkok">Bangkok, Thailand</option>
+                            <option value="kuala-lumpur">Kuala Lumpur, Malaysia</option>
+                            <option value="new-york">New York, United States</option>
+                            <option value="toronto">Toronto, Canada</option>
+                            <option value="sydney">Sydney, Australia</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Weight (kg)</label>
+                        <input type="number" id="weight" placeholder="Enter weight in kg" step="0.1" min="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label>Service Type</label>
+                        <select id="serviceType">
+                            <option value="express">Express (1-2 Days)</option>
+                            <option value="standard">Standard (3-5 Days)</option>
+                            <option value="economy">Economy (5-7 Days)</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn-track" onclick="calculateShipping()" style="width: 100%; justify-content: center;">
+                    <i class="fas fa-calculator"></i> Calculate Cost
+                </button>
+                <div class="calc-result" id="calcResult">
+                    <h3>Estimated Cost: ₹<span id="costValue">0</span></h3>
+                    <p>Estimated Delivery: <span id="deliveryTime">-</span></p>
+                    <p style="margin-top: 8px; color: #666; font-size: 14px;">* Prices are indicative and may vary based on package dimensions and fuel surcharge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text" style="color: white;">Swift<span style="color: #ffcc00;">Track</span></div>
+                    <p>India's most reliable express delivery network. Connecting businesses and people across the nation and beyond.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Express Delivery</a></li>
+                        <li><a href="#">Parcel Shipping</a></li>
+                        <li><a href="#">Freight & Cargo</a></li>
+                        <li><a href="#">International</a></li>
+                        <li><a href="#">Warehousing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Center</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Track Shipment</a></li>
+                        <li><a href="#">Find Location</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">File a Claim</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2024 SwiftTrack Express. All rights reserved.</div>
+                <div>
+                    <a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none; margin-right: 20px;">Privacy Policy</a>
+                    <a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none;">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i> <span id="notifText">Tracking found!</span>
+    </div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
